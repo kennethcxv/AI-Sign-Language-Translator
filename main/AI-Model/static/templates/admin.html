@@ -1,0 +1,276 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .search {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+            padding: 10px;
+        }
+        
+        .admin-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input, select, button {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="search" placeholder="Search...">
+        <form class="admin-form">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="guest">Guest (Temporary ID):</label>
+            <input type="text" id="guest" name="guest" required>
+            <label for="validity">Validity (in minutes):</label>
+            <input type="number" id="validity" name="validity" required>
+            <label for="emergency">Emergency Call:</label>
+            <select id="emergency" name="emergency">
+                <option value="yes">Yes</option>
+                <option value="no" selected>No</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/4.4.4/typescript.min.js"></script>
+    <script src="admin.ts"></script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Panel</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inner-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <form class="admin-form">
+                <p>ID:</p>
+                <input type="text" id="id" name="id" required>
+                <p>Title:</p>
+                <input type="text" id="title" name="title" required>
+                <p>Guest (Temporary ID):</p>
+                <input type="text" id="guest" name="guest" required>
+                <p>Validity (in minutes):</p>
+                <input type="number" id="validity" name="validity" required>
+                <p>Emergency Call:</p>
+                <select id="emergency" name="emergency">
+                    <option value="yes">Yes</option>
+                    <option value="no" selected>No</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/4.4.4/typescript.min.js"></script>
+    <script src="admin.ts"></script>
+    <script>
+        document.querySelector('.admin-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const id = (document.getElementById('id') as HTMLInputElement).value;
+    const title = (document.getElementById('title') as HTMLInputElement).value;
+    const guest = (document.getElementById('guest') as HTMLInputElement).value;
+    const validity = (document.getElementById('validity') as HTMLInputElement).value;
+    const emergency = (document.getElementById('emergency') as HTMLSelectElement).value;
+
+    console.log({id, title, guest, validity, emergency});
+});
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Panel</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-box {
+    background-color: #ccc;
+    padding: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.inner-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 700px;
+    height:300px;
+}
+
+input, select, button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="left-box">Left box content</div>
+        <div class="inner-box">
+            <form class="admin-form">
+                <p>ID:</p>
+                <input type="text" id="id" name="id" required>
+                <p>Title:</p>
+                <input type="text" id="title" name="title" required>
+                <p>Guest (Temporary ID):</p>
+                <input type="text" id="guest" name="guest" required>
+                <p>Temporary Time:</p>
+                <input type="number" id="validity" name="validity" required>
+                <p>Emergency Call:</p>
+                <select id="emergency" name="emergency">
+                    <option value="yes">Yes</option>
+                    <option value="no" selected>No</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/4.4.4/typescript.min.js"></script>
+    <script src="admin.ts"></script>
+    <script>
+        document.querySelector('.admin-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const id = (document.getElementById('id') as HTMLInputElement).value;
+    const title = (document.getElementById('title') as HTMLInputElement).value;
+    const guest = (document.getElementById('guest') as HTMLInputElement).value;
+    const validity = (document.getElementById('validity') as HTMLInputElement).value;
+    const emergency = (document.getElementById('emergency') as HTMLSelectElement).value;
+
+    console.log({id, title,    console.log({id, title, guest, validity, emergency});
+});
+
+
+    </script>
+</body>
+</html>

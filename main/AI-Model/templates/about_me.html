@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniFace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="stylesheet" href="../static/sphere.css">
+  <script src="../static/https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+  <script src="../static/scripts.js" defer></script>
+  <link rel="stylesheet" href="../static/https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link href='https://fonts.googleapis.com/css?family=Nano+Sans' rel='stylesheet'>
+
+  <style>
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: -50px; /* Overlap effect */
+      opacity: 0; /* Initially set to invisible */
+      transform: translateY(50px); /* Initial position for animation */
+      transition: opacity 0.5s, transform 0.5s; /* Animation effect */
+    }
+
+    /* First card doesn't need negative margin */
+    .about-us.card {
+      margin-top: 0;
+    }
+    body {
+      font-family: 'Poppins' , sans-serif;
+      background: linear-gradient(to bottom, #A4C4FF, #a4b9ff, #a4acff);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0;
+      color: black;
+    }
+    .main-container {
+        max-width: 50%;
+        width: 50%;
+        margin: 0 auto;
+        margin-left:250px;
+        margin-right:250px;
+      }
+      .about-us, .what-is-uniface {
+        width: 70%;
+        margin-bottom: 20px;
+
+        margin-left: -10%;
+      }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    li:before {
+        content: '\2713';
+        margin-right: 10px;
+        color: #2196F3;
+    }
+
+    .sphere-container {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+    }
+    /* Importing Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Create a wrapper for the two divs and use flexbox */
+.content-wrapper {
+display: flex;
+justify-content: space-between;
+margin-left: 2%;
+margin-right: 2%;
+margin-bottom: 50px;
+
+}
+
+.what-is-uniface {
+margin-top: 20px;
+}
+
+
+.main-wrapper {
+  background: linear-gradient(to bottom, #A4C4FF, #a4b9ff, #a4acff);
+position: absolute;
+top: 20%;
+left: 25%;
+transform: translate(-25%, -30%);
+z-index: -1;
+}
+hr {
+border: none;
+border-top: 1px solid #ccc;
+margin: 20px 0;
+}
+p{
+  color: black;
+}
+ul{
+  color: black;
+}
+</style>
+</head>
+<body>
+<header>
+
+</header>
+
+    <div class="main-container">
+        <p>
+          <div class="card about-us">
+            <h2>About Us</h2>
+            <p>
+              Hand Companion is an innovative AI technology designed to enhance communication by utilizing
+              advanced hand tracking capabilities.
+              This AI system can accurately identify letters and gestures made by the user's hand movements.
+              It then transcribes these gestures into words, allowing for efficient and intuitive communication.
+            </p>
+          </div>
+
+          <div class="card what-is-uniface">
+            <h2>What is Hand Companion</h2>
+            <ul>
+              <li>Natural-sounding speech</li>
+              <li>Aids those who are have auditory impairment</li>
+              <li>Serves as a translators to citizens</li>
+              <li>Can be accessed virtually anywhere</li>
+            </ul>
+          </div>
+
+      </div>
+    <div class="main-wrapper">
+      <main>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="sphere-container" id="sphereContainer"></div>
+      </main>
+    </div>
+
+        <script>
+          // Intersection Observer to detect when the cards are in the viewport
+          const cards = document.querySelectorAll('.card');
+            const options = {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, options);
+
+        cards.forEach(card => {
+          observer.observe(card);
+        });
+  </script>
+</body>
+</html>
+          
+
+

@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 25px;
+    margin-top: -10px;
+    color: #333;
+    font-size: 24px;
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1190px; /* Increased the max-width */
+    border: 3px solid #007BFF; /* Added a thicker border */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px; /* Added rounded corners */
+    background: linear-gradient(to bottom, #b6d8ff, #91c6ff,
+    #6EB4FF);
+}
+
+.video-section, .transcript-section {
+    flex: 1;
+    padding: 20px;
+    
+    border-right: 2px dashed #000000; /* Made the border dashed */
+}
+
+.video-section:last-child, .transcript-section:last-child {
+    border-right: none;
+}
+
+#transcript {
+    width: 97%;
+
+    height: 400px; /* Increased the height */
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 5px; /* Added rounded corners */
+    font-size: 16px; /* Increased font size */
+}
+.transcript-title {
+    display: inline-block;  /* Makes the box only as wide as the content */
+    border-bottom: 2px solid black;  /* Makes the bottom border thicker to appear as an underline */
+    padding: 5px;  /* Adds some space around the content inside the box */
+}
+
+.audio-box {
+    width: 100%;
+    max-width: 1200px; /* Increased the max-width */
+    height: 100px; /* Increased the height */
+    background-color: #007BFF; /* Changed the color */
+    color: #fff; /* Made the text color white */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 10px; /* Added rounded corners */
+    margin-top: 20px; /* Added some margin on top */
+}
+.transcript-section{
+    background: linear-gradient(to bottom, #b6d8ff, #91c6ff,
+    #6EB4FF);
+}
+.bar {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    animation: scaling 0.5s infinite alternate;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.bar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.bar:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.bar:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.bar:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.bar:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.bar:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(3);
+    }
+}

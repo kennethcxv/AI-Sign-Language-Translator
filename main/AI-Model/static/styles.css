@@ -1,0 +1,14 @@
+
+
+ .main-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background:beige;
+  height: 170%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-55%, -30%);
+  z-index: -1;
+}
+

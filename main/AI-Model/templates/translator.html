@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASL Translator Webcam Stream</title>
+    <link rel="stylesheet" href="../static/translator.css">
+    
+</head>
+<body>
+    <h1>ASL Translator Webcam Stream</h1>
+    <div class="container">
+        <div class="video-section">
+            <img src="{{ url_for('video_feed') }}" alt="Webcam Stream">
+        </div>
+        <div class="transcript-section">
+            <h2 class="transcript-title">Transcript</h2>
+            <textarea id="transcript" readonly></textarea>
+        </div>
+        
+    </div>
+    <div class="audio-box">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

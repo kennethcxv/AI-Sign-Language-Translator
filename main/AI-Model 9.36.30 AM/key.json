@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hand-gesture-audio",
+  "private_key_id": "f3c8011102766c9b7df37c23253517a7423106c4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDaIppvL09RR0Tu\n/52zsTHHXEtU7aEQs8AjfQyiQJ3Jf3i9fRkBGYkiV+waqqaJc0fWkBPFZ19FO3/G\nMEYfwJJF4JJeNu1onXP39/rcKaKeBvQeNAdMhUsmkhgb53bs/riTO/wfnts6NfWJ\nFHpK8VpH7hLUI7yinvQlHBOMDnww7Nf/AHLj0yD9gBEtlgeg4X84yrTEFCtTdoOH\nit4YkPw39GhbKDfwKg/AWGEiCHXKBuryPg5lxttwODj8RVBtB7K47ADQ8VjFMXRv\nhX6X/CyEbKjZBrfAwk9cb7ctMDLZOSiRR0NHTlpOvTm/I/0StUrueTCkN0QGwlox\nVwX/MQrjAgMBAAECggEAFILtd6gAstlbQ4f4ucVfM2pb0QwZOZtVZWDkV7twutpI\nLbU+LSrMCNUwp99FEqaq6iOZIFZUkIuEO8wdQ+4VMwnnaYGLuGsZ1QbV6W7m0ipA\nOTjWON1N0D4rkzAkMCvRilK5JfYHkkUxpeatiy9/uETMM3N60OXWekjWE7Tm+6iV\nPeVMR9Y+zYadK3z40bpyEMHtjm7Dya53zYjhA4VDPpVxGyZVMYlOrcHCPsSDqwOW\nvBKZBJagsho/NcdvrpAuZG7FN/n0XsS7OpWWQ0RGskiwNmtLJ6bPlDoqG0mhT9H+\n9c1gmvm/MO8Eb7lJ8WqiKBpnvQ00PTIGy6o5HZWXaQKBgQD0GY7Y2TNL8BA+ZXnk\n5FI/b3mBZk5IQMJEiyG01UNOwQnUzpPTAslTeYwJQ4pbvbWjAcv4ybi50hEHkqsi\nlUsqpyFRLvJl+xxqhmLZmcVDZ20nHT6MvCMMEkoQ+4hmnPt7UUmg411D9CaKODcu\n/elhtRN4Unrc1rJyiFCCzilmKQKBgQDkxP+Fbmf5SUfqH7HGxqSm0mTwzTyKl3sr\nJlbm0kHeaClL2DVqen6dnb9R4tKpjWW1ij1Spa/R88XOeutFFdN23dZVCocwvUh8\n8m1yTC+5tjqe3te+ORHd0p8vnZIWk3conbcfEBNPh0IHgIn9zdHOkMG4bMgrBNkM\ntRetol4SKwKBgQDKMbl/qjqxdkMeTFQx42a1oRMWurWxZ+MDf/QFpHnCbGhGXG9a\nZH57pLz4l3euEnC4e66HgCCB2527liQn216OEC6q3qZvDxg0rOiIsrUR5kQmGDVN\nwjGNuECd3JzZ0sMFHQpOOMdymHSsHXCofi6pfqKIElovP7BE6uE12Ku2MQKBgB80\nC5I8k+v5pdh2SD5Pm+exLNl3dPmGXeNt0E6dgSR/2pogvHBwktKW0KCvqoI76hKP\n73tVZBzj/igCthJvPq+o5HInBHeOadO5EVqUr7HJ/EbtKEom6Jvz/Yh2GpX/uTIO\nCQswmyGu1j/FtYyrxSFCt1mbZNYRTDWigb9KNUCPAoGBANHoY1+J4jfflWbOHUgc\ngALd7IwLBE7Qmm7Vyy+uISfOAkwYwiDjl5vNMBAZ7NppqTu0YZXICEBgN2ZMBR35\nVSqnPdMq0P31ZIjUtOSMXpwPXF8mbvFBJN6C+OeSsR3dDvbWq+5iAdh2U61+AnKE\n/ki87QEfWzv8AESjMpvT/IJV\n-----END PRIVATE KEY-----\n",
+  "client_email": "kevin-c@hand-gesture-audio.iam.gserviceaccount.com",
+  "client_id": "117396255073146382692",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kevin-c%40hand-gesture-audio.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

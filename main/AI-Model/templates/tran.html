@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASL Translator Webcam Stream</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='translator.css') }}">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #video-container {
+            margin-bottom: 20px;
+        }
+        #text-container {
+            padding: 20px;
+            width: 50%;  /* Adjust width as needed */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ASL Translator Webcam Stream</h1>
+    <button onclick="shutdownServer()">Shutdown Server</button>
+    <div class="container">
+        <img src="{{ url_for('video') }}" width="50%"  alt=""/>
+        <div id="text-container">
+            <h2>Captured Text</h2>
+            <p id="captured-text"></p>
+        </div>
+    </div>
+
+    <!-- Audio Player -->
+    <div class="audio-box">
+        <audio id="audio-player" controls>
+            <source id="audio-source" src="" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        // Remove the audio playback code from the setInterval function
+        setInterval(function() {
+            fetch('/get_captured_chars')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('captured-text').innerText = data.captured_chars;
+            });
+        }, 9100);
+
+        // Add an event listener to play the audio once the window is closed or refreshed
+        window.addEventListener('unload', function() {
+            document.getElementById('audio-source').src = '/audio';
+            document.getElementById('audio-player').load(); // Reload the audio player
+            document.getElementById('audio-player').play(); // Play the new audio
+        });
+
+        function shutdownServer() {
+            fetch('/keypress', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'key=q'
+            })
+            .then(response => response.text())  // Change this line
+            .then(data => {
+                if (data === "Server shutting down...") {  // Change this line
+                    document.getElementById('audio-source').src = '/audio';
+                    document.getElementById('audio-player').load(); // Reload the audio player
+                    document.getElementById('audio-player').play(); // Play the new audio
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

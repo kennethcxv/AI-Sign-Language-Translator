@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hand Companion - Advanced Facial Recognition AI for Secure Event Access Control</title>
+<link rel="stylesheet" href="../static/https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        top: 900px;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #fde4e4, #C2DFFF, #A4C4FF);
+        background-repeat: no-repeat;
+        opacity: 80%;
+        background-size: cover;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Center content vertically */
+        height: 100vh; /* Full viewport height */
+    }
+    .images-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+        
+    .image {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        transition: transform 0.3s;
+    }
+        
+    .image:hover {
+        transform: scale(1.0);
+
+    }
+    .h4{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .h1{
+        text-align:center;
+        font-size: 50px;
+        margin-top: 350px;
+    }
+    .p{
+        font-size: 30px;
+        text-align: center;
+    }
+    hr{
+        width:650px;
+       color:black;
+        
+    }
+    .try-Btn {
+        background-color: #0D47A1;
+        color: #ffffff; /* White text color */
+        padding: 15px 25px; /* Padding around the text */
+        margin-top:25px;
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Hand cursor on hover */
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect and scaling */
+        align-items: center; /* Center vertically */
+        display: inline-block;
+        font-weight: bold; /* Bold text */
+        font-size: 25px; /* Increased by 6% from 16px */
+        transform: scale(1.06); /* Scale the button size by 6% */
+    }
+
+    .try-Btn:hover {
+        background-color: #2196F3;
+    }
+    .fade-text {
+        transition: opacity 0.5s;
+        opacity: 1;
+        text-align: center; /* Center text horizontally */
+        margin: 0 auto; /* Center block elements horizontally */
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        position: relative;
+        z-index: 1; /* Place it behind the other content */
+    }
+    .waves-bg {
+        position: absolute; /* Position the div absolutely */
+        bottom: 0; /* Align to the bottom of the body */
+        left: 0; /* Align to the left of the body */
+        width: 100%; /* Stretch the div to fit the width of the viewport */
+        z-index: -1; /* Place behind all other elements */
+    }
+
+    .waves-bg img {
+        width: 100%; /* Stretch the SVG to fit the width of the viewport */
+        display: block; /* Remove any default margins or padding */
+    }
+
+</style>
+</head>
+<body>
+        <div class="fade-text">
+            <h1 class="h1">Hand Companion </h1>
+            <h4 class="h4">Innovative way for audibly impaired users to effectively communicate with others.</h4>
+            <hr>
+            <div class="button-container">
+                <a target="_blank" href="translator.html">
+                    <button id="disableScrollBtn" class="try-Btn">Try me!</button>
+                </a>
+            </div>
+        </div>
+    <div class="waves-bg">
+        <img src="./../Images/layered-waves-haikei.svg" alt="Waves Background">
+    </div>
+        <script>
+            var prevScrollpos = window.pageYOffset; // get the initial scroll position
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) { // if scrolling up
+                document.querySelector("header").style.opacity = "1"; // set opacity back to fully visible
+                } else { // if scrolling down
+                document.querySelector("header").style.opacity = "0"; // set opacity to 0 to fade out
+                }
+                prevScrollpos = currentScrollPos;
+                // show the header when the user scrolls all the way up to the top of the page
+                if (currentScrollPos === 0) {
+                document.querySelector("header").style.opacity = "1";
+                }
+            }
+            window.onscroll = function() {
+                // Calculate the scroll percentage
+                var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+                // Update the opacity of the fade-text container
+                document.querySelector('.fade-text').style.opacity = 1 - scrollPercentage;
+            };
+            document.getElementById('disableScrollBtn').addEventListener('click', function() {
+                if (document.body.style.overflow !== 'hidden') {
+                    document.body.style.overflow = 'hidden'; // Disable scrolling
+                } else {
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+            </script>
+
+    </body>
+    </html>

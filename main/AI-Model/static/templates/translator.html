@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASL Translator Webcam Stream</title>
+    <link rel="stylesheet" href="translator.css">
+    
+</head>
+<body>
+    <header>
+        <div class="svg-bg">
+            <img src="Images/circle-scatter-haikei.svg" alt="SVG 1" class="svg-1">
+            <img src="Images/circle-scatter-haikei%20(1).svg" alt="SVG 2" class="svg-2">
+            <img src="Images/circle-scatter-haikei%20(2).svg" alt="SVG 3" class="svg-3">
+        </div>
+        <img src="Images/Logo.png" alt="Logo">
+        <ul>
+            <li><a href="Final.html#Home">Home</a></li>
+            <li><a href="Final.html#about_me">About</a></li>
+            <li><a href="Final.html#impact">Services</a></li>
+            <li><a href="Final.html#demo">Features</a></li>
+            <li><a href="Final.html#team">Team</a></li>
+        </ul>
+        <a href="login.html"><button class="login-btn">Login</button></a>
+    </header>
+    <section class="window">
+        <h1>ASL Translator Webcam</h1>
+        <div class="container">
+            <div class="video-section">
+                <img src="{{ url_for('video_feed') }}" alt="Webcam Stream">
+            </div>
+            <div class="transcript-section">
+                <h2 class="transcript-title">Transcript</h2>
+                <textarea id="transcript" readonly></textarea>
+            </div>
+        </div>
+        <div class="audio-box">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

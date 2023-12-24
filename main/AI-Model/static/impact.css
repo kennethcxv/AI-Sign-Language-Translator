@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(to bottom, #a4acff, #9cb3ff, #94acff) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    display: flex;
+    flex-direction: column; /* Changed to column to stack elements vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+    top: 900px;
+    opacity: 100%;
+}
+
+.svg-waves img {
+    width: 130%; /* Stretch the SVG to fit the width of the viewport */
+    display: block; /* Remove any default margins or padding */
+    position: absolute;
+    top: 0; /* Align to the top of the body */
+    left: 0; /* Align to the left of the body */
+    z-index: -1; /* Place behind all other elements */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-right: 250px;
+    margin-left: 250px;
+}
+
+.left-image, .right-image {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.left-image {
+    margin-right: 20px;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+}
+
+.right-image {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 22px;
+}

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+
+
+    justify-content: space-between;
+
+    padding: 50px;
+}
+
+.content {
+    flex: 1;
+    margin-right: 1000px;
+}
+
+.content h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.content li {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.images img {
+    width: 300%; /* Adjust this value to make the image smaller or larger */
+    max-width: 1000px; /* This ensures the image doesn't get too large */
+}

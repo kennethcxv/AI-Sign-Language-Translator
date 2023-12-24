@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team</title>
+    <link rel="stylesheet" href="team.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            min-height: 100vh;
+        }
+
+        body {
+            font-family: 'Poppins' , sans-serif;
+            background: linear-gradient(to bottom, #4493f9,
+            #2d7ef8,
+            #6591f9);
+            color: #000000;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 2rem;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .team-member {
+            background-color: #f5f4f4;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow-wrap: break-word;
+            padding: 2rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member img {
+            width: 40%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .team-member-info {
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .team-member h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .team-member p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 0;
+            word-wrap: break-word;
+        }
+
+        .bottom-box {
+            grid-row: 2;
+        }
+
+        .bottom-box:first-child {
+            grid-column: 2;
+        }
+
+        @media screen and (max-width: 868px) {
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet the Team</h1>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="images/PFP 2.png" alt="Profile Picture">
+            <h2>Kenneth Camacho</h2>
+            <p>Full-Stack Developer</p>
+            <hr>
+            <br />
+            <p style=text-align:left>I'm a Doral College student passionate about computer science, especially AI, machine learning, and back-end software engineering. Since freshman year, I've been improving my skills through coursework, personal projects, and the computer science club. I'm excited to use my education and passion to make a difference in the tech industry.</p>
+            </div>
+        <div class="team-member">
+            <img src="images/PFP 1.png" alt="Profile Picture">
+            <h2>Kevin Camacho</h2>
+            <p>Ai & Back-End Developer</p>
+            <hr>
+            <br />
+            <p style=text-align:left>I am a Computer Science major at Florida International University, passionate about Artificial Intelligence, Machine Learning,and Back End Software Engineering. Seeking opportunities to apply my knowledge to real-world challenges and contribute to shaping the future of technology.</p>
+        </div>
+        <div class="team-member">
+            <img src="Images/PFP4.jpg" alt="Profile Picture">
+            <h2>Eric Gessa</h2>
+            <p>Back-End Developer</p>
+            <hr>
+            <br />
+            <p style=text-align:left>Florida International University compsi student who is very passionate about learning and making projects come to life. Java and Python are my main programming languages but I am willing to learn more!</p>
+        </div>
+        <div class="team-member">
+            <img src="Images/PFP3.jpg" alt="Profile Picture">
+            <h2>Giancarlo Nassi</h2>
+            <p>Full-Stack Developer</p>
+            <hr>
+            <br/>
+            <p style=text-align:left>Florida Internation University student that loves developing innovative solutions, honing skills, or simply gaining wisdom, the enthusiasm to learn and create from real-world experiences is a powerful force that drives personal and professional development.
+            </p>
+        </div>
+    </body>
+    </html>
